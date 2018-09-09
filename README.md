@@ -1,3 +1,3 @@
-# HelloWorld
-learning how to use GitHub
-just a Canadian learning how to code for real
+# Ruan's progress in C++
+Hello! I created this repository to document my projects and progress on my journey
+to proficiency in C++
