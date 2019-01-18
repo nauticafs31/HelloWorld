@@ -14,7 +14,7 @@ int main ()
 	const double TOL = 0.1;
 
 	//fin is plain txt: 1 robotic arm legnth, and _ x,y coordinates the arm tries to reach
-	ifstream fin("A3Actual.txt");
+	ifstream fin("robotic_arm_inputs.txt");
 
 	//test for input file presence and proper open
 	if (!fin)
