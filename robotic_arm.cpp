@@ -47,9 +47,3 @@ int main ()
 	return EXIT_SUCCESS;
 
 }//end main
-
-/*
-output from A3Actual.txt-
-Times arm did not reach: 8
-Press any key to continue . . .
-*/
