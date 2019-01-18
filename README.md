@@ -15,6 +15,15 @@ The program outputs the time in minutes, the distance from robot, and the headin
 It also keeps track of the shortest time between rabbit appearances, and outputs this value after iterating through all 
 appearances.
 
+## robotic-arm:
+SAMPLE INPUT FILE:
+
+This project included the use of trigonometry, looping, and file input to determine if a given coordinate pair is within reach of a robotic arm 
+of x length. 
+
+The input file starts with the arm length, and then y number of coordinate pairs.
+The program outputs the coordinate pair of all pairs that are out of reach, as well as the total number of location that are out of reach.
+
 ## library_rules:
 SAMPLE INPUT FILE: library_requests.txt
 
