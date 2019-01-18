@@ -2,6 +2,7 @@
 Hello! I created this repository to document my projects and progress on my journey
 to proficiency in C++. Below is brief description of each file and it's purpose/problem statement.
 
+## Note to self: add a4, and flight time 
 
 ## rabbit_spotting: 
 SAMPLE INPUT FILE: rascally_rabbits.txt
