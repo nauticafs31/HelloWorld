@@ -1,5 +1,3 @@
-// Jason and Ruan
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -13,14 +11,17 @@ int timeInMinutes (int militaryTime)
 	return ((militaryTime - militaryTime % 100)/100)* 60 + (militaryTime % 100);
 }
 
+//hypotenuse of triangle with a,b sides xValue, yValue is distance to rabbit in metres
 double distanceInMeters (double xValue, double yValue)
 {
 	return sqrt(pow(xValue, 2) + pow(yValue, 2));
 }
 
+//heading in degrees with East as 0/360, North at 90
 double findHeading (double xValue, double yValue)
 {
 	double heading = 0;
+	
 	if (xValue == 0)
 	{
 		if (yValue > 0)
@@ -48,17 +49,17 @@ double findHeading (double xValue, double yValue)
 		heading = -180 + (relativeHeading / M_PI * 180);
 	}
 	return heading;
-}
+} //end findHeading
 
 int main ()
 {
-	int militaryTime = 0, previousTime = 0, timeDifference = 0, shortestTime 
-		= 10000;
+	int militaryTime = 0, previousTime = 0, timeDifference = 0, shortestTime= 1000000;
 	double xValue = 0, yValue = 0;
 	
-	ifstream fin ("wascally_wabbits.txt");
-	ofstream fout ("rabbit_results.txt");
+	ifstream fin ("rascally_rabbits.txt");
+	ofstream fout ("rabbit_spotting_results.txt");
 	
+	//output error message if problem occurs during open of file
 	if (!fin)
 	{
 		cout << "Error opening file" << endl;
@@ -66,9 +67,11 @@ int main ()
 		return EXIT_FAILURE;
 	}
 	
+	//format output file header
 	fout << "Time in Minutes" << setw(21) << "Distance in Meters" << setw(11) 
 		<< "Heading" << endl;
 	
+	//while there are spottings to iterate...
 	while (fin >> militaryTime >> xValue >> yValue)
 	{
 		fout << setw(8) << timeInMinutes(militaryTime) << fixed 
@@ -92,8 +95,8 @@ int main ()
 	return EXIT_SUCCESS;
 }
 /*
-INPUT: wascally_wabbits.txt
-OUTPUT:
+INPUT: rascally_rabbits.txt
+SAMPLE OUTPUT:
 Time in Minutes   Distance in Meters    Heading
       12                82.75            174.73
       32                76.84             -7.40
