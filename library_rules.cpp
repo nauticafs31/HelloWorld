@@ -12,8 +12,8 @@ int main ()
 	string borrowType="";
 	const int TESTCASENUM = 9;
 	
-	ifstream fin("testCases.txt");
-	ofstream fout ("q1results.txt");
+	ifstream fin("library_requests.txt");
+	ofstream fout ("library_results.txt");
 	
 	//test for input file presence and proper open
 	if (!fin)
